@@ -13,7 +13,7 @@ namespace Mastermind
             Console.WriteLine("For fast walktrough press 1, Press 2 for to read the rules, Press 3 to begin playing Mastermind!, PRESS Q TO CLOSE PROGRAM");
 
             string line = Console.ReadLine();
-            if (int.TryParse(line, out var valg)) //Checker om det er et heltal og hvis det er 1,2 eller 3
+            if (int.TryParse(line, out var valg)) //Checker1111 om det er et heltal og hvis det er 1,2 eller 3
             {
                 switch (valg)
                 {
