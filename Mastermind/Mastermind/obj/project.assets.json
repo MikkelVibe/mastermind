@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Magnus\\Documents\\Pogramering 2.g\\Mastermind\\Mastermind\\Mastermind.csproj",
+      "projectUniqueName": "C:\\Users\\Magnus\\Source\\Repos\\MikkelVibe\\mastermind\\Mastermind\\Mastermind\\Mastermind.csproj",
       "projectName": "Mastermind",
-      "projectPath": "C:\\Users\\Magnus\\Documents\\Pogramering 2.g\\Mastermind\\Mastermind\\Mastermind.csproj",
+      "projectPath": "C:\\Users\\Magnus\\Source\\Repos\\MikkelVibe\\mastermind\\Mastermind\\Mastermind\\Mastermind.csproj",
       "packagesPath": "C:\\Users\\Magnus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Magnus\\Documents\\Pogramering 2.g\\Mastermind\\Mastermind\\obj\\",
+      "outputPath": "C:\\Users\\Magnus\\Source\\Repos\\MikkelVibe\\mastermind\\Mastermind\\Mastermind\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Magnus\\AppData\\Roaming\\NuGet\\NuGet.Config",
