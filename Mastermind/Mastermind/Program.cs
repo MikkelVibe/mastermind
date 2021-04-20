@@ -8,7 +8,6 @@ namespace Mastermind
     {
         static void Main(string[] args)
         {
-
             Console.Clear(); // grunden til jeg clear er fordi hvis brugeren går tilbage fra en af spillende skal hovedmenuen vere clear 
             Console.WriteLine("For fast walktrough press 1, Press 2 for to read the rules, Press 3 to begin playing Mastermind!, PRESS Q TO CLOSE PROGRAM");
 
@@ -29,7 +28,25 @@ namespace Mastermind
 
                     case 3:
                         Mastermind mastermind = new Mastermind(); //her referer jeg til min klasse mastermind og navngiver den Mastermind
-                        mastermind.Run(); // Her siger jeg at den skal starte Rules klassen 
+                        int difficult = 1;
+                        bool isInt = false;
+                        while (!isInt)
+                        {
+                           
+                            Console.WriteLine("For medium press 1, for hardmode press 2");
+                            try
+                            {
+                                difficult = int.Parse(Console.ReadLine());
+                                if (difficult != 1 && difficult != 2)
+                                    break;
+                                isInt = true;
+                            }
+                            catch
+                            {
+                                Console.WriteLine("That's not 1 or 2");
+                            }
+                        }
+                        mastermind.Run(difficult); // Her siger jeg at den skal starte Rules klassen 
                         break;
 
                     default: // Hvis brugeren ikke har trykket hverken 1,2 eller 3 vil den bruge denne
@@ -40,9 +57,7 @@ namespace Mastermind
                 }
             }
             if (line.ToUpper() == "Q") return;
-
         }
-
     }
 }
 
