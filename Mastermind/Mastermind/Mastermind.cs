@@ -6,8 +6,6 @@ using System.Text;
 
 namespace Mastermind
 {
-    
-
     class Mastermind
     {
         Random rng = new Random();
