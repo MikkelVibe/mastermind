@@ -10,7 +10,7 @@ namespace Mastermind
     {
         Random rng = new Random();
         public string ValgtOrd;
-        new Words words = new Words();
+        Words words = new Words();
         public bool mode;
         public void Run(int hardmode)
         {
@@ -20,19 +20,17 @@ namespace Mastermind
             {
                 int random = rng.Next(0, words.normalOrd.Length);
                 ValgtOrd = words.normalOrd[random];
-                Console.Write(ValgtOrd);
+                Game.LettersBox(5, ValgtOrd);
             }
             else if (!mode)
             {
                 int random = rng.Next(0, words.hardOrd.Length);
                 ValgtOrd = words.hardOrd[random];
-                Console.Write(ValgtOrd);
+                Game.LettersBox(7, ValgtOrd);
             }
+
+            Game.GuessField(12, ValgtOrd);
             
-
-
-
-
 
             string line = Console.ReadLine();
             if (line.ToUpper() == "Q")

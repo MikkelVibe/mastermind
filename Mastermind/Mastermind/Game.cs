@@ -1,4 +1,3 @@
-/*
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +6,10 @@ namespace Mastermind
 {
     class Game {
         private static Random random = new Random(); // it is used to pick a random letter
-        static void Main(string[] args)
-        {
-            Box(10, "HELLO"); // generates a box with the random words
-        }
 
-        static void Box(int lives, string word) // the box with the words suggestions
+        public static void LettersBox(int reiterations, string word) // the box with the words suggestions
         {
+            word = word.ToUpper();
             static string GenerateChar (string chars) // to generate a random strig using the whole alphabet or just the given letters
             {
                 if(chars=="") // definition of default characters
@@ -22,7 +18,7 @@ namespace Mastermind
                 }
                 return(new string(Enumerable.Repeat(chars, 1).Select(s => s[random.Next(s.Length)]).ToArray())); // return of a string containing one random character
             }
-            for(int x=0; x<lives; x++) // repeats until there are some lives
+            for(int x=0; x<reiterations; x++) // repeats until there are some reiterations
             {
                 List<string> letters = new List<string>(); 
                 int rightLetters = 0;
@@ -51,6 +47,24 @@ namespace Mastermind
                 System.Console.WriteLine();
             }
         }
+
+        // TO DO check the remaining lives!
+        public static void GuessField (int lives, string word) // the box with the words suggestions
+        {
+            System.Console.WriteLine("\nTry to guess the word");
+            while(true)
+            {
+                string guessedWord = System.Console.ReadLine();
+                if(guessedWord==word)
+                {
+                    System.Console.WriteLine("\nThe word was correct!");
+                    break;
+                }
+                else
+                {
+                    System.Console.WriteLine("\nRetry");
+                }
+            }
+        }
     }
 }
-*/
