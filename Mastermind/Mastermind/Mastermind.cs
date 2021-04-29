@@ -20,13 +20,11 @@ namespace Mastermind
             {
                 int random = rng.Next(0, words.normalOrd.Length);
                 ValgtOrd = words.normalOrd[random];
-                Game.LettersBox(5, ValgtOrd);
             }
             else if (!mode)
             {
                 int random = rng.Next(0, words.hardOrd.Length);
                 ValgtOrd = words.hardOrd[random];
-                Game.LettersBox(7, ValgtOrd);
             }
 
             Game.GuessField(12, ValgtOrd);
