@@ -8,14 +8,12 @@ namespace Mastermind
     {
         static void Main(string[] args)
         {
-            
-
             int difficult = 0;
             bool isInt = false;
             Console.Clear(); // grunden til jeg clear er fordi hvis brugeren går tilbage fra en af spillende skal hovedmenuen vere clear 
             while (!isInt)
             {
-                Console.WriteLine("For fast walktrough press 1, Press 2 for to read the rules, Press 3 to begin playing Mastermind!, PRESS Q TO CLOSE PROGRAM");
+                Console.WriteLine("For fast walktrough press 1, Press 2 for to read the rules, Press 3 to begin playing Mastermind!, PRESS 0 TO CLOSE PROGRAM");
                 try
                 {
                     int line;
