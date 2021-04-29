@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Mastermind
 {
@@ -11,14 +9,15 @@ namespace Mastermind
         public static void GuessField (int lives, string word) // the box with the words suggestions
         {
             word = word.ToUpper();
-            System.Console.WriteLine("\nTry to guess the word");
+            Console.WriteLine("Try to guess the word (" + word.Length + " letters)\n");
             while(true)
             {
-                string guessedWord = System.Console.ReadLine().ToUpper();
-                System.Console.WriteLine();
+                string guessedWord = Console.ReadLine().ToUpper();
                 if(guessedWord==word)
                 {
-                    System.Console.WriteLine("\nThe word was correct!");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("\nThe word was correct!!!");
+                    Console.ForegroundColor = ConsoleColor.White;
                     break;
                 }
                 else
@@ -28,26 +27,24 @@ namespace Mastermind
                         if(guessedWord[x]==word[x])
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-                            System.Console.Write(guessedWord[x]);
-                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.Write(guessedWord[x]);
                         }
                         else
                         {
                             if(word.Contains(guessedWord[x]))
                             {
                                 Console.ForegroundColor = ConsoleColor.Blue;
-                                System.Console.Write(guessedWord[x]);
-                                Console.ForegroundColor = ConsoleColor.White;
+                                Console.Write(guessedWord[x]);
                             }
                             else
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
-                                System.Console.Write(guessedWord[x]);
-                                Console.ForegroundColor = ConsoleColor.White;
+                                Console.Write(guessedWord[x]);
                             }
                         }
+                        Console.ForegroundColor = ConsoleColor.White; // reset the console color
                     }
-                    System.Console.WriteLine("\nRetry");
+                    Console.WriteLine("\n\nRetry\n");
                 }
             }
         }
