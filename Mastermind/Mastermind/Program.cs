@@ -8,8 +8,27 @@ namespace Mastermind
     {
         static void Main(string[] args)
         {
+            int difficult = 1;
+            bool isInt = false;
             Console.Clear(); // grunden til jeg clear er fordi hvis brugeren går tilbage fra en af spillende skal hovedmenuen vere clear 
-            Console.WriteLine("For fast walktrough press 1, Press 2 for to read the rules, Press 3 to begin playing Mastermind!, PRESS Q TO CLOSE PROGRAM");
+            while (!isInt)
+            {
+
+                Console.WriteLine("For fast walktrough press 1, Press 2 for to read the rules, Press 3 to begin playing Mastermind!, PRESS Q TO CLOSE PROGRAM");
+                try
+                {
+                    difficult = int.Parse(Console.ReadLine());
+                    if (difficult != 1 && difficult != 2 && difficult != 3)
+                        break;
+                    isInt = true;
+                }
+                catch
+                {
+                    Console.WriteLine("That's not 1, 2 or 3");
+                    
+                }
+            }
+            
 
             string line = Console.ReadLine();
             if (int.TryParse(line, out var valg)) //Checker om det er et heltal og hvis det er 1,2 eller 3
