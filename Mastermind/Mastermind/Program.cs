@@ -64,14 +64,8 @@ namespace Mastermind
                 catch
                 {
                     Console.WriteLine("That's not 1, 2 or 3");
-                    
                 }
             }
-
-
-
-            
-            
         }
     }
 }
