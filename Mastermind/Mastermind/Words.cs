@@ -8,19 +8,19 @@ namespace Mastermind
     {
         public string[] normalOrd = new string[] // If the user has selected normal mode then these words will be used
         {
-            "cool",
-            "dsdaa",
-            "dssada",
-            "dsdaaa",
-
+            "wars",
+            "robot",
+            "end",
+            "world",
+            "utopia"
         };
         public string[] hardOrd = new string[]  // If the user has selected hard mode then these words will be used
         {
-            "cooldsdasdaa",
-            "dsdaadsdsadda",
-            "dssadadasdadad",
-            "dsdaaadasdasda",
-
+            "fiction",
+            "politics",
+            "scientist",
+            "cyberpunk",
+            "corruption"
         };
     }
 }

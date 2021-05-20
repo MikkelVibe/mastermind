@@ -13,7 +13,7 @@ namespace Mastermind
             Console.WriteLine("By reading these rules can you insure yourself the best player experience! You can always press \"3\" to go back");
             Console.WriteLine();
             Console.WriteLine("Rule nr. 1 You can only try guessing 12 times!");
-            Console.WriteLine("Rule nr. 2 You can only try guessing on words depending on the level so if the level is medium you can guess on 3-5 letter words and when hard 7-10 letter words!");
+            Console.WriteLine("Rule nr. 2 You can only try guessing on words depending on the level so if the level is medium you can guess on 3-6 letter words and when hard 7-10 letter words!");
             Console.WriteLine("Rule nr. 3 When you think you know the word, type it in the console and press enter!");
             Console.WriteLine("Rule nr. 4 If you guessed the letter/letters that aren't in the word it will mark the letter/letters with red.");
             Console.WriteLine("Rule nr. 5 If you guessed letter/letters that are in the word but not in the correct order it will mark the letter/letters with blue.");
