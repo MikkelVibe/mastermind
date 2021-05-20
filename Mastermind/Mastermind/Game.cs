@@ -15,10 +15,18 @@ namespace Mastermind
                 string guessedWord = Console.ReadLine().ToUpper();
                 if(guessedWord==word)
                 {
+                    Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("\nThe word was correct!!!");
+                    string wonPrompt = @" __   __                                    
+ \ \ / /___   _   _  __      __ ___   _ __  
+  \ V // _ \ | | | | \ \ /\ / // _ \ | '_ \ 
+   | || (_) || |_| |  \ V  V /| (_) || | | |
+   |_| \___/  \__,_|   \_/\_/  \___/ |_| |_|
+                                            ";
+                    Console.WriteLine(wonPrompt);
                     Console.ForegroundColor = ConsoleColor.White;
-                    break;
+                    Console.WriteLine("\nPress enter to go back");
+                    return;
                 }
                 else
                 {
@@ -54,9 +62,17 @@ namespace Mastermind
                     }
                 }
             }
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\nGAME OVER");
+            string prompt = @"   ____                                                  
+  / ___|  __ _  _ __ ___    ___    ___ __   __ ___  _ __ 
+ | |  _  / _` || '_ ` _ \  / _ \  / _ \\ \ / // _ \| '__|
+ | |_| || (_| || | | | | ||  __/ | (_) |\ V /|  __/| |   
+  \____| \__,_||_| |_| |_| \___|  \___/  \_/  \___||_|   
+                                                         ";
+            Console.WriteLine(prompt);
             Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\nPress enter to go back");
         }
     }
 }

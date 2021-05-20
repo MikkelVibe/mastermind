@@ -9,8 +9,16 @@ namespace Mastermind
         public void Run()
         {
             Console.Clear();
+
+            string prompt = @"  ____          _            
+ |  _ \  _   _ | |  ___  ___ 
+ | |_) || | | || | / _ \/ __|
+ |  _ < | |_| || ||  __/\__ \
+ |_| \_\ \__,_||_| \___||___/
+                             ";
+            Console.Write(prompt);
             
-            Console.WriteLine("By reading these rules can you insure yourself the best player experience! You can always press \"enter\" to go back");
+            Console.WriteLine("\nBy reading these rules can you insure yourself the best player experience!");
             Console.WriteLine();
             Console.WriteLine("Rule nr. 1 You can only try guessing 12 times!");
             Console.WriteLine("Rule nr. 2 You can only try guessing on words depending on the level so if the level is medium you can guess on 3-6 letter words and when hard 7-10 letter words!");
@@ -19,6 +27,8 @@ namespace Mastermind
             Console.WriteLine("Rule nr. 5 If you guessed letter/letters that are in the word but not in the correct order it will mark the letter/letters with blue.");
             Console.WriteLine("Rule nr. 6 If you guessed letter/letters that are in the word and they are in the correct order it will mark the letter/letters with green.");
 
+            Console.WriteLine("\nPress enter to go back");
+            
             Console.Read();
 
         }

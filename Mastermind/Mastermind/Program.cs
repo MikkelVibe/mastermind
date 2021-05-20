@@ -20,6 +20,13 @@ namespace Mastermind
             int difficult = 0;
             bool isInt = false;
             Console.Clear(); // grunden til jeg clear er fordi hvis brugeren går tilbage fra en af spillende skal hovedmenuen vere clear 
+            string prompt = @"  __  __              _                          _             _ 
+ |  \/  |  __ _  ___ | |_  ___  _ __  _ __ ___  (_) _ __    __| |
+ | |\/| | / _` |/ __|| __|/ _ \| '__|| '_ ` _ \ | || '_ \  / _` |
+ | |  | || (_| |\__ \| |_|  __/| |   | | | | | || || | | || (_| |
+ |_|  |_| \__,_||___/ \__|\___||_|   |_| |_| |_||_||_| |_| \__,_|
+                                                                 ";
+            Console.WriteLine(prompt);
             while (!isInt)
             {
                 Console.WriteLine("Press 1 for a fast walktrough");
