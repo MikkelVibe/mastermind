@@ -10,7 +10,7 @@ namespace Mastermind
         {
             word = word.ToUpper();
             Console.WriteLine("Try to guess the word (" + word.Length + " letters)\n");
-            while(true)
+            for(int livesUsed=0; livesUsed<lives; livesUsed++)
             {
                 string guessedWord = Console.ReadLine().ToUpper();
                 if(guessedWord==word)
@@ -44,9 +44,19 @@ namespace Mastermind
                         }
                         Console.ForegroundColor = ConsoleColor.White; // reset the console color
                     }
-                    Console.WriteLine("\n\nRetry\n");
+                    if(lives-livesUsed > 1)
+                    {
+                        Console.WriteLine("\n\nRetry (" + (lives-livesUsed-1) + " lives left)\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n\nThe word was " + word + "\n");
+                    }
                 }
             }
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nGAME OVER");
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }

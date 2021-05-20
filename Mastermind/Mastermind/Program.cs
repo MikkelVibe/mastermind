@@ -8,24 +8,36 @@ namespace Mastermind
     {
         static void Main(string[] args)
         {
+            bool shouldStop = false;
+            while(!shouldStop)
+            {
+                shouldStop = PrintMenu();
+            }
+        }
+
+        static bool PrintMenu()
+        {
             int difficult = 0;
             bool isInt = false;
             Console.Clear(); // grunden til jeg clear er fordi hvis brugeren går tilbage fra en af spillende skal hovedmenuen vere clear 
             while (!isInt)
             {
-                Console.WriteLine("For fast walktrough press 1, Press 2 for to read the rules, Press 3 to begin playing Mastermind!, PRESS 0 TO CLOSE PROGRAM");
+                Console.WriteLine("Press 1 for a fast walktrough");
+                Console.WriteLine("Press 2 for to read the rules");
+                Console.WriteLine("Press 3 to begin playing Mastermind!");
+                Console.WriteLine("Press 0 to close the program");
                 try
                 {
                     int line;
                     line = int.Parse(Console.ReadLine());
-                    if (line != 1 && line != 2 && line != 3)
+                    if (line != 0 && line != 1 && line != 2 && line != 3)
                         break;
                     isInt = true;
 
                     switch (line)
                     {
                         case 0:
-                            return;
+                            return true;
 
                         case 1:
                             Walktrough walktrough = new Walktrough(); //her refererer jeg til min klasse walktrough og navngiver den walktrough 
@@ -63,9 +75,11 @@ namespace Mastermind
                 }
                 catch
                 {
-                    Console.WriteLine("That's not 1, 2 or 3");
+                    Console.Clear();
+                    Console.WriteLine("That's not a valid number");
                 }
             }
+            return false;
         }
     }
 }
