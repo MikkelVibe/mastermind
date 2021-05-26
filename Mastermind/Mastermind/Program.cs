@@ -15,10 +15,35 @@ namespace Mastermind
             }
         }
 
+        static void ChooseDifficulty()
+        {
+            bool isValid = false;
+            Mastermind mastermind = new Mastermind(); // her referer jeg til min klasse mastermind og navngiver den Mastermind
+            while (!isValid)
+            {
+                Console.Clear();
+                Console.WriteLine("For medium press 1, for hardmode press 2");
+
+                string difficult = Console.ReadLine();
+                Console.Clear();
+
+                switch (difficult)
+                {
+                    case "1":
+                        isValid = true;
+                        mastermind.Run(1);
+                        break;
+                    case "2":
+                        isValid = true;
+                        mastermind.Run(2);
+                        break;
+                }
+            }
+        }
+
         static bool PrintMenu()
         {
-            int difficult = 0;
-            bool isInt = false;
+            bool isValid = false;
             Console.Clear(); // grunden til jeg clear er fordi hvis brugeren går tilbage fra en af spillende skal hovedmenuen vere clear 
             string prompt = @"  __  __              _                          _             _ 
  |  \/  |  __ _  ___ | |_  ___  _ __  _ __ ___  (_) _ __    __| |
@@ -27,63 +52,41 @@ namespace Mastermind
  |_|  |_| \__,_||___/ \__|\___||_|   |_| |_| |_||_||_| |_| \__,_|
                                                                  ";
             Console.WriteLine(prompt);
-            while (!isInt)
+            while (!isValid)
             {
                 Console.WriteLine("Press 1 for a fast walktrough");
                 Console.WriteLine("Press 2 for to read the rules");
                 Console.WriteLine("Press 3 to begin playing Mastermind!");
-                Console.WriteLine("Press 0 to close the program");
-                try
+                Console.WriteLine("Press Q to close the program");
+
+                string line = Console.ReadLine().ToUpper();
+
+                switch (line)
                 {
-                    int line;
-                    line = int.Parse(Console.ReadLine());
-                    if (line != 0 && line != 1 && line != 2 && line != 3)
+                    case "Q":
+                        return true;
+
+                    case "1":
+                        isValid = true;
+                        Walktrough walktrough = new Walktrough(); //her refererer jeg til min klasse walktrough og navngiver den walktrough 
+                        walktrough.Run(); // her siger jeg at hvis inputtet er 1 skal den åbne klassen walktrough
                         break;
-                    isInt = true;
 
-                    switch (line)
-                    {
-                        case 0:
-                            return true;
+                    case "2":
+                        isValid = true;
+                        Rules rules = new Rules(); //her referer jeg til min klasse rules og navngiver den Rules
+                        rules.Run(); // Her siger jeg at den skal starte Rules klassen 
+                        break;
 
-                        case 1:
-                            Walktrough walktrough = new Walktrough(); //her refererer jeg til min klasse walktrough og navngiver den walktrough 
-                            walktrough.Run(); // her siger jeg at hvis inputtet er 1 skal den åbne klassen walktrough
-                            break;
+                    case "3":
+                        isValid = true;
+                        ChooseDifficulty();
+                        break;
 
-                        case 2:
-                            Rules rules = new Rules(); //her referer jeg til min klasse rules og navngiver den Rules
-                            rules.Run(); // Her siger jeg at den skal starte Rules klassen 
-                            break;
-
-                        case 3:
-                            bool issInt = false;
-                            Mastermind mastermind = new Mastermind(); //her referer jeg til min klasse mastermind og navngiver den Mastermind
-                            while (!issInt)
-                            {
-
-                                Console.WriteLine("For medium press 1, for hardmode press 2");
-                                try
-                                {
-                                    difficult = int.Parse(Console.ReadLine());
-                                    if (difficult != 1 && difficult != 2)
-                                        break;
-                                    issInt = true;
-                                    Console.Clear();
-                                }
-                                catch
-                                {
-                                    Console.Clear();
-                                }
-                            }
-                            mastermind.Run(difficult);
-                            break;
-                    }
-                }
-                catch
-                {
-                    Console.Clear();
-                    Console.WriteLine("That's not a valid number");
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("That's not a valid command\n");
+                        break;
                 }
             }
             return false;
