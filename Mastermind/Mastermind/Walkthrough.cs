@@ -14,7 +14,7 @@ namespace Mastermind
   /  .-. .-.  \       __________________________________________________________
   |  | | | |  |     /                                                           \
    \ \o/ \o/ /     |  Hi, my name is Casper. I'm here to help you.               |
-  _/    ^    \_    |  I will guide you through the logic of the game MasterMind.  |
+  _/    ^    \_    |  I will guide you through the logic of the game MasterMind. |
  | \  '---'  / |   |  Press enter when you are ready...                          |
  / /`--. .--`\ \    \___________________________________________________________/
 / /'---` `---'\ \
