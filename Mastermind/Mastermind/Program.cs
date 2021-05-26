@@ -68,8 +68,8 @@ namespace Mastermind
 
                     case "1":
                         isValid = true;
-                        Walktrough walktrough = new Walktrough(); //her refererer jeg til min klasse walktrough og navngiver den walktrough 
-                        walktrough.Run(); // her siger jeg at hvis inputtet er 1 skal den åbne klassen walktrough
+                        Walkthrough walkthrough = new Walkthrough(); //her refererer jeg til min klasse walktrough og navngiver den walktrough 
+                        walkthrough.Run(); // her siger jeg at hvis inputtet er 1 skal den åbne klassen walktrough
                         break;
 
                     case "2":
