@@ -28,7 +28,7 @@ namespace Mastermind
             `..'
 ");
 
-            Console.Read();
+            Console.ReadLine();
 
             Console.Clear();
             Console.WriteLine(@"    .-----.
@@ -50,7 +50,7 @@ namespace Mastermind
             `..'
 ");
 
-            Console.Read();
+            Console.ReadLine();
 
             Console.Clear();
             Console.Write(@"    .-----.
@@ -82,7 +82,7 @@ namespace Mastermind
             `..'
 ");
 
-            Console.Read();
+            Console.ReadLine();
 
             Console.Clear();
             Console.WriteLine(@"    .-----.
@@ -104,7 +104,7 @@ namespace Mastermind
             `..'
 ");
 
-            Console.Read();
+            Console.ReadLine();
 
             Console.Clear();
             Console.WriteLine(@"    .-----.
@@ -126,7 +126,7 @@ namespace Mastermind
             `..'
 ");
 
-            Console.Read();
+            Console.ReadLine();
 
         }
     }
