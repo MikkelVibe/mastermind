@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Mastermind
+﻿namespace Mastermind
 {
     class Words
     {
-        public string[] normalOrd = new string[] // If the user has selected normal mode then these words will be used
+        public string[] normalOrd = new string[] // Hvis brugeren har valgt normal tilstand, vil disse ord blive brugt
         {
             "wars",
             "robot",
@@ -14,7 +10,7 @@ namespace Mastermind
             "world",
             "utopia"
         };
-        public string[] hardOrd = new string[]  // If the user has selected hard mode then these words will be used
+        public string[] hardOrd = new string[]  // Hvis brugeren har valgt hard tilstand, vil disse ord blive brugt
         {
             "fiction",
             "politics",
