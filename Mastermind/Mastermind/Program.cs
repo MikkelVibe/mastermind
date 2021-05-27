@@ -13,11 +13,11 @@ namespace Mastermind
             }
         }
 
-        static void ChooseDifficulty()
+        static void ChooseDifficulty() // her laver jeg en funktion som jeg kalder "ChooseDifficulty" dette er så jeg kan refere til den senere i teksten 
         {
             bool isValid = false;
             Mastermind mastermind = new Mastermind(); // her referer jeg til min klasse mastermind og navngiver den Mastermind
-            while (!isValid)
+            while (!isValid) //hvis brugeren har valgt at trykke 3 vil den udskrive "For medium press 1, for hardmode press 2"
             {
                 Console.Clear();
                 Console.WriteLine("For medium press 1, for hardmode press 2");
@@ -25,16 +25,16 @@ namespace Mastermind
                 string difficult = Console.ReadLine();
                 Console.Clear();
 
-                switch (difficult)
+                switch (difficult) //her lavet jeg en swich til mine 2 cases 
                 {
-                    case "1":
+                    case "1": // hvis 1 er valgt vil udkommet være korrekt og den vil derfor køre mastermind classen 1
                         isValid = true;
                         mastermind.Run(1);
-                        break;
-                    case "2":
+                        break; // Jeg siger her at den skal stoppe med at læse koden og den vil derfor gå videre til mastermind clasen
+                    case "2": // hvis 2 er valgt vil udkommet være korrekt og den vil derfor køre mastermind classen 2
                         isValid = true;
                         mastermind.Run(2);
-                        break;
+                        break; // Jeg siger her at den skal stoppe med at læse koden og den vil derfor gå videre til mastermind classen
                 }
             }
         }
