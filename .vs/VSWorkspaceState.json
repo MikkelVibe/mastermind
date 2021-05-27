@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Mastermind",
-    "\\Mastermind\\Mastermind"
+    "\\Mastermind"
   ],
-  "SelectedNode": "\\Mastermind\\Mastermind\\Rules.cs",
+  "SelectedNode": "\\Mastermind\\Mastermind.sln",
   "PreviewInSolutionExplorer": false
 }
